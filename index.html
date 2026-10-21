@@ -4761,7 +4761,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   ORDER.forEach((w) => DATA[w].fams.forEach((f) => { if (!ALLFAMS.find((x) => x.id === f.id)) ALLFAMS.push(f); }));
 
   // one filter panel. lobby = nothing selected = the full catalog
-  const state = { lobby: false, world: '664', cat: null, fams: new Set(), green: false, acc: { world: true, cat: true, fam: true, green: true }, moreFams: false, limit: 12, sig: '', promo: 'C' };
+  const state = { lobby: false, world: '664', cat: null, fams: new Set(), green: false, acc: { world: true, cat: true, fam: true, green: true }, moreFams: false, limit: 12, sig: '', promo: 'C2' };
   const syncLobby = () => { state.lobby = false; };
 
   const arrowUp = (up) => `<svg width="12" height="7" viewBox="0 0 12 7" fill="none" style="transform:rotate(${up ? 180 : 0}deg)"><path d="M0.899562 1.11655L6.42556 6.64255L11.9696 1.11655L11.0156 0.144548L6.44356 4.71655L1.88956 0.126547L0.899562 1.11655Z" fill="currentColor"></path></svg>`;
@@ -4872,7 +4872,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   const bnCell = (c2) => `<div class="product-item border-container tb-bn-cell">${bnBox('tb-bn-ccard' + (c2 ? ' tb-bn-c2' : ''), 'סדרה חדשה בקטלוג', 'מברשות, רולרים וציוד איכותי המותאמים מדויק לצבעי טמבור – לאחיזה נוחה ותוצאה מקצועית.')}</div>`;
   const bnPhoto2 = () => bnBox('tb-bn-photo tb-bn-photo2', 'סדרה חדשה בקטלוג', BN_D);
   const BN_ROW = { B: bnSplit, C: bnPhoto, D: bnStrip };
-  const BN_NAMES = { C: '1 · תמונה רחבה', C2: '2 · משבצת למעלה', E: '3 · כרטיס כפול' };
+  const BN_NAMES = { C2: '1 · משבצת אחת', E: '2 · שתי משבצות', C: '3 · רוחב מלא' };
 
   function mountTop() {
     const old = document.getElementById('tb-top'); if (old) old.remove();
